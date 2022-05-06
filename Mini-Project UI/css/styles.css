@@ -1,0 +1,116 @@
+body {
+    margin: 0;
+    background: #1F2937;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100px;
+    font-size: 2.75em;
+    background: #3A69D2;
+}
+
+.toolbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1em;
+    margin: 5px 10px;
+    padding: 10px 20px;
+}
+
+.toolbar-btn {
+    background: #D1D4F4;
+    color: #4A4E74;
+    font-weight: bold;
+    margin: 10px 10px;
+    padding: 10px 20px;
+    border: 2px solid #D1D4F4;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.toolbar-calendar:not(input) {
+    margin: 10px 10px;
+}
+
+.toolbar-calendar {
+    width: 25%;
+}
+
+.toolbar label {
+    width: 8%;
+}
+
+.toolbar-btn:hover {
+    color: #D1D4F4;
+    font-weight: bold;
+    background: #6989D2;
+}
+
+.main-page {
+    margin: 10px;
+}
+
+#TRANS_MW_ERC_PM_TN_RADIO_LINK_POWER_Grid {
+    margin-top: 10px;
+}
+
+.configuration {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: left;
+}
+
+.configuration-col {
+    margin: 10px;
+    width: 20%;
+}
+
+.options {
+    padding: 0;
+    list-style: none;
+}
+
+.options li,
+input,
+label {
+    cursor: pointer;
+}
+
+.options input[type="radio"]:checked+label {
+    color: #6989D2;
+    font-weight: bold;
+}
+
+.Charts div {
+    margin: 10px;
+}
+
+.Table-Grid {
+    margin: 10px;
+}
+
+.toolbar-switch {
+    width: 5%;
+    margin-right: 10px;
+}
+
+.k-switch-label-on,
+.k-switch-label-off {
+    color: #3A69D2;
+    font-weight: bold;
+}
+
+.configuration-switch {
+    margin: 10px;
+    width: 30%;
+}

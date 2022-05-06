@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- jQuery Library -->
+    <script src="https://code.jquery.com/jquery-1.12.3.min.js" integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ=" crossorigin="anonymous"></script>
+    <!-- Kendo Libraries -->
+    <link href="https://kendo.cdn.telerik.com/2022.1.412/styles/kendo.common.min.css" rel="stylesheet" />
+    <link href="https://kendo.cdn.telerik.com/2022.1.412/styles/kendo.default.min.css" rel="stylesheet" />
+    <script src="https://kendo.cdn.telerik.com/2022.1.412/js/jquery.min.js"></script>
+    <script src="https://kendo.cdn.telerik.com/2022.1.412/js/kendo.all.min.js"></script>
+    <!-- --- -->
+    <script src="js/index.js"></script>
+    <link href="css/styles.css" rel="stylesheet" />
+    <title>Mini Project</title>
+</head>
+
+<body>
+    <header>
+        <p>Mini Project</p>
+    </header>
+
+    <div class="toolbar">
+        <input class="toolbar-switch" id="switch" />
+
+        <label class="toolbar-calendar" for="dateTimePickerFrom">Date Time From:</label>
+        <input class="toolbar-calendar" id="dateTimePickerFrom" />
+
+        <label class="toolbar-calendar" for="dateTimePickerTo">Date Time To:</label>
+        <input class="toolbar-calendar" id="dateTimePickerTo" />
+
+        <button class="toolbar-btn" id="applyButton">Apply</button>
+        <button class="toolbar-btn" id="filterButton">Filters</button>
+        <button class="toolbar-btn" id="filterClearButton">Reset Filters</button>
+    </div>
+
+    <div class="filter-by-date">
+        <div id="calendar"></div>
+    </div>
+
+    <div class="configuration">
+        <div class="configuration-col">
+            <h4>Base Unit</h4>
+            <input class="configuration-switch" id="config-switch" />
+        </div>
+        <div class="configuration-col">
+            <h4>Base KPI Unit</h4>
+            <ul class="options">
+                <li>
+                    <input id="baseKPIUnitRX" name="baseKpiUnit" type="radio" value="maxRXLevel" checked="checked" />
+                    <label for="baseKPIUnitRX">RX Level (default)</label>
+                </li>
+                <li>
+                    <input id="baseKPIUnitTX" name="baseKpiUnit" type="radio" value="maxTXLevel" />
+                    <label for="baseKPIUnitTX">TX Level</label>
+                </li>
+                <li>
+                    <input id="baseKPIUnitRSL" name="baseKpiUnit" type="radio" value="rslDeviation" />
+                    <label for="baseKPIUnitRSL">RSL Deviation</label>
+                </li>
+            </ul>
+        </div>
+        <div class="configuration-col">
+            <h4>Aggregate function</h4>
+            <ul class="options">
+                <li>
+                    <input id="aggregateMax" name="aggregate" type="radio" value="max" />
+                    <label for="aggregateMax">Max</label>
+                </li>
+                <li>
+                    <input id="aggregateMin" name="aggregate" type="radio" value="min" />
+                    <label for="aggregateMin">Min</label>
+                </li>
+                <li>
+                    <input id="aggregateSum" name="aggregate" type="radio" value="sum" />
+                    <label for="aggregateSum">Sum</label>
+                </li>
+                <li>
+                    <input id="aggregateAvg" name="aggregate" type="radio" value="avg" checked="checked" />
+                    <label for="aggregateAvg">Avg (default)</label>
+                </li>
+                <li>
+                    <input id="aggregateCount" name="aggregate" type="radio" value="count" />
+                    <label for="aggregateCount">Count</label>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="main-page">
+        <div class="Charts">
+            <div id="KPI_Chart"></div>
+        </div>
+
+        <div class="Table-Grid" id="TRANS_MW_ERC_PM_TN_RADIO_LINK_POWER_Grid"></div>
+    </div>
+</body>
+
+</html>
